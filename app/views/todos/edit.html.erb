@@ -1,0 +1,17 @@
+
+
+<%= link_to("<< Back to Index", todos_path, :class => 'back-link') %>
+
+<div class="todo edit">
+  <h2>Update ToDo Item</h2>
+
+  <%= form_for(@todo) do |f| %>
+<!--  This will call the partial _form.html.erb for this view -->
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Update ToDo Item") %>
+    </div>
+
+  <% end %>
+</div>

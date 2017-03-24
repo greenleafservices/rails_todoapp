@@ -1,0 +1,40 @@
+
+<div class="todo index">
+  <h2>To Do Items</h2>
+
+  <!--<%#= image_tag('plus_sign.png', :size => '11x11', :alt => '+') %>-->
+  <!--<%#= link_to("Add New Subject", new_subject_path, :class => 'action new') %>-->
+
+  <table class="listing" summary="To Do List">
+    <tr class="header">
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    <!-- This loops through the todo table and assigns
+      values to the todo value -->
+    <% @todos.each do |todoitem| %>
+      <tr>
+        <td class="col-30"><%= todoitem.id %></td>
+        <td class="col-210"><%= todoitem.name %></td>
+        <td class="col-300"><%= todoitem.description %></td>
+      
+        <td class="actions">
+      <!--  <%#= link_to("View Pages", pages_path(:subject_id => subject.id), :class => 'action show') %>-->
+        <%= link_to("Show", todo_path(todoitem)) %>
+        <%= link_to("Edit", edit_todo_path(todoitem)) %>
+        <%= link_to("Delete", delete_todo_path(todoitem), :class => 'action delete') %>-->
+        </td>
+      </tr>
+      <!--  <%#= link_to("Edit", edit_subject_path(subject), :class => 'action edit') %>-->
+      
+      <!--</td>-->
+      
+    <% end %>
+  </table>
+  <br>
+  <br>
+  <!--<p>-->
+  <!--  <%#= link_to("Return to Main Menu", admin_path) %>-->
+  <!--</p>-->
+</div>
