@@ -1,18 +1,29 @@
 <!--<%# @page_title = "Show Page" %>-->
 
-<%= link_to("<< Back to Index", todos_path, :class => 'back-link') %>
+<%#= link_to("<< Back to Index", todos_path, :class => 'back-link') %>
 
-<div class="todo show">
   <h2>Show ToDos</h2>
-  <table summary="Subject detail view">
-    <tr>
-      <th>Name</th>
-      <td><%= @todo.name %></td>
-    </tr>
-    <tr>
-      <th>Description</th>
-      <td><%= @todo.description %></td>
-    </tr>
+  <!--<table summary="ToDo detail view">-->
+  <!--  <tr>-->
+  <!--    <th>Name</th>-->
+  <!--    <td><%#= @todo.name %></td>-->
+  <!--  </tr>-->
+  <!--  <tr>-->
+  <!--    <th>Description</th>-->
+  <!--    <td><%#= @todo.description %></td>-->
+  <!--  </tr>-->
+
+  <p>
+    Name: <%= @todo.name %>
+  </p>
+  
+  <p>
+    Description: <%= @todo.description%>
+  </p>
+
+  <%= link_to "Edit this ToDo Item", edit_todo_path(@todo) %> |
+  <%= link_to "Back to ToDo Items Listing", todos_path %>
   
 
-</div>
+  
+
