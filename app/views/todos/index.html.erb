@@ -14,17 +14,17 @@
       <th>Actions</th>
     </tr>
     <!-- This loops through the todo table and assigns
-      values to the todo value -->
-    <% @todos.each do |todoitem| %>
+          values to the todo value -->
+    <% @todos.each do |todo| %>
       <tr>
-        <td class="col-30"><%= todoitem.id %></td>
-        <td class="col-210"><%= todoitem.name %></td>
-        <td class="col-300"><%= todoitem.description %></td>
-        <td class="col-30"><%= todoitem.id %></td>
+        <td class="col-30"><%= todo.id %></td>
+        <td class="col-210"><%= todo.name %></td>
+        <td class="col-300"><%= todo.description %></td>
+        <td class="col-30"><%= todo.id %></td>
         <td class="actions">
-          <%= link_to("Show", todo_path(todoitem)) %>
-          <%= link_to("Edit", edit_todo_path(todoitem)) %>
-          <%= link_to("Delete", delete_todo_path(todoitem), :class => 'action delete') %>-->
+          <%= link_to("Show", todo_path(todo)) %>
+          <%= link_to("Edit", edit_todo_path(todo)) %>
+          <%= link_to("Delete", delete_todo_path(todo), :class => 'action delete') %>-->
         </td>
       </tr>
       <!--  <%#= link_to("Edit", edit_subject_path(subject), :class => 'action edit') %>-->
