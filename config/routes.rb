@@ -6,7 +6,7 @@ Rails.application.routes.draw do
  
  resources :todos do
     member do
-      get :delete #should be added ,not part of default resources
+      get :delete #should be added, not part of default resources
     end
   end
 end
