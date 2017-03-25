@@ -9,16 +9,7 @@
   </head>
 
   <body>
-    <% if !flash[:notice].blank? %>
-        <p class="notice">
-            <%= flash[:notice] %>
-        </p>
-      <% end %>
-    <!--<%# flash.each do |name, msg| %>-->
-    <!--  <ul>-->
-    <!--    <li><%#= msg %></li>-->
-    <!--  </ul>-->
-    <!--<%# end %>-->
+    
     <%= yield %>
   </body>
 </html>

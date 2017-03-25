@@ -70,6 +70,10 @@ a:hover {}
   background: $white;
   color: $light_brown;
 }
+.action {
+  text-decoration: none;
+}
+  
 
 .notice {
   height: 1.25em;
@@ -130,6 +134,24 @@ a:hover {}
   }
 
 }
+
+.menu {
+  .identity { text-align: center; }
+  ul {
+    margin: 3em 250px;
+    list-style: none;
+    li { margin-bottom: 1em; }
+  }
+}
+
+.index {
+  table {
+    clear: both;
+    width: auto;
+    tr td { border: 1px solid #666666; }
+  }
+}
+
 .col-30{
   width: 30px;
 }

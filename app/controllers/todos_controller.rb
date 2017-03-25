@@ -1,5 +1,7 @@
 class TodosController < ApplicationController
  
+ layout 'todos'
+ 
  def index
       @todos = Todo.all # you have to supply a scope in order to make the program go to the DB and retrieve the data
       #@todos = Todo.sorted

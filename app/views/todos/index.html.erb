@@ -1,9 +1,10 @@
+<% @page_title = "List ToDo Item" %>
 
 <div class="todo index">
   <h2>To Do Items</h2>
 
   <!--<%#= image_tag('plus_sign.png', :size => '11x11', :alt => '+') %>-->
-  <%= link_to("Add New ToDo Item", new_todo_path, :class => 'action new') %>-->
+  <%= link_to("Add New ToDo Item", new_todo_path, :class => 'action new') %>
 
   <table class="listing" summary="To Do List">
     <tr class="header">
@@ -22,9 +23,9 @@
         <td class="col-300"><%= todo.description %></td>
         <td class="col-30"><%= todo.id %></td>
         <td class="actions">
-          <%= link_to("Show", todo_path(todo)) %>
-          <%= link_to("Edit", edit_todo_path(todo)) %>
-          <%= link_to("Delete", delete_todo_path(todo), :class => 'action delete') %>-->
+          <%= link_to("Show", todo_path(todo), :class => 'action show') %>
+          <%= link_to("Edit", edit_todo_path(todo), :class => 'action show') %>
+          <%= link_to("Delete", delete_todo_path(todo), :class => 'action delete') %>
         </td>
       </tr>
       <!--  <%#= link_to("Edit", edit_subject_path(subject), :class => 'action edit') %>-->
